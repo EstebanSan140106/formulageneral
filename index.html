@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula General</title>
+    <link rel="shortcut icon" href="imagenes/Plus-Symbol-Silhouette.png" type="image/x-icon">
+</head>
+<body>
+    <script>
+        // Pedir al usuario que ingrese los valores de a, b y c
+        var a = prompt("Ingrese el valor de a:");
+       var b = prompt("Ingrese el valor de b:");
+       var c = prompt("Ingrese el valor de c:");
+
+       // Llamar a la función para resolver la ecuación
+       FormulaGeneral(a, b, c);
+       function FormulaGeneral(a, b, c) {
+    var disc = b * b - 4 * a * c;
+
+    // Verificar si el discriminante es negativo, positivo o cero
+    if (disc < 0) {
+        console.log("La ecuación no tiene soluciones reales.");
+    } else if (disc === 0) {
+        var x = -b / (2 * a);
+        console.log("La ecuación tiene una solución real: x =", x);
+    } else {
+        var x1 = (-b + Math.sqrt(disc)) / (2 * a);
+        var x2 = (-b - Math.sqrt(disc)) / (2 * a);
+        console.log("La ecuación tiene dos soluciones reales: x1 =", x1, ", x2 =", x2);
+    }
+}
+
+
+    </script>
+
+    <h1>
+        
+    </h1>
+</body>
+</html>
